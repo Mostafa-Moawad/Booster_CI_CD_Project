@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps: 
+      - uses: actions/checkout@v2
       - name: run tests
         run: |
           docker build . --file Dockerfile -t mostafa22/jenkins:v1.1
