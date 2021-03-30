@@ -11,7 +11,9 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps: |
+    steps: 
+      - name: run tests
+        run: |
           docker build . --file dockerfile -t mostafa22/jenkins:v1.1
           docker login -u ${{ secrets.USER_NAME }} -p ${{ secrets.PASS_WORD }}
           docker push mostafa22/jenkins:v1.1
